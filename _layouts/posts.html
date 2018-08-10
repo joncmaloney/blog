@@ -1,0 +1,19 @@
+---
+layout: default.html
+---
+
+
+{% for post in site.post %}
+	<div class="post-preview">
+	  	<a href="{{ post.url }}">
+			<h2 class="post-title">
+		  		{{ post.title }}
+			</h2>
+			<h3 class="post-subtitle">
+			  	{{ post.excerpt | remove: '<p>' | remove: '</p>' }}
+			</h3>
+		</a>
+		<p class="post-meta">{{ post.date | date: '%Y-%B-%d' }}</p>
+	</div>
+	<hr>
+{% endfor %}

@@ -1,0 +1,40 @@
+---
+layout: default.html
+---
+
+<!-- Look the author details up from the site config. -->
+{% assign author = site.data.authors[page.author] %}
+
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('img/post-bg.jpg')">
+	<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-md-10 mx-auto">
+					<div class="post-heading">
+					  	<h1>{{ page.title }}</h1>
+					  	{% if subheading %}
+					  	<h2 class="subheading">{{ page.subheading }}</h2>
+					  	{% endif %}
+					  	{% if author %}
+					  	<span class="meta">Posted by
+					    	<!-- Personal Info. -->
+							Post by <a href="{{ author.web }}" target="_blank">{{ author.name }}</a>
+						</span>
+						{% endif %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+<article>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-md-10 mx-auto">
+				{{ content }}
+			</div>
+		</div>
+	</div>
+</article>
