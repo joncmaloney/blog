@@ -1,11 +1,8 @@
 ---
-layout: posts
+layout: post
 title: Install Docker CE - CentOS
+author: jon_maloney
 ---
-
-
-{{ page.title}}
-==========================
 
 source: https://docs.docker.com/install/linux/docker-ce/centos/
 
@@ -18,14 +15,12 @@ Before you install Docker CE for the first time on a new host machine, you need 
   ```
 
 
-
 1. Install required packages. yum-utils provides the yum-config-manager utility, and device-mapper-persistent-data and lvm2 are required by the devicemapper
 
   ```bash
   $ sudo yum install -y yum-utils device-mapper-persistent-data lvm2
   ```
 
-  
 
 2. Use the following command to set up the stable repository. You always need the stable repository, even if you want to install builds from the edge or test 
 
@@ -43,6 +38,7 @@ Install Docker CE
 ------------------
 
 1. Install the latest version of Docker CE, or go to the next step to install a specific version:
+  
   ```bash
   $ sudo yum install -y docker-ce
   ```

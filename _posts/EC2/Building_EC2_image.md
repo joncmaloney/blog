@@ -1,10 +1,9 @@
 ---
 layout: posts
 title: Install Docker CE - CentOS
+author:jon_maloney
 ---
 
-{{ page.title}}
-==========================
 
 ```bash
   $ sudo yum update -y && install -y nano wget yum-utils device-mapper-persistent-data lvm2
