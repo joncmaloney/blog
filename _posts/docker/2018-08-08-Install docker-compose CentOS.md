@@ -5,7 +5,6 @@ author: jon_maloney
 summary: A quick recap on how install docker compose on centos.
 ---
 Source:
-    
     https://docs.docker.com/compose/install/#install-compose
     https://github.com/docker/compose/releases
     https://docs.docker.com/compose/completion/#bash
