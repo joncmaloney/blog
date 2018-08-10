@@ -15,4 +15,4 @@ A screenshot or any image can be added to a jekyll page. If using markdown you a
 
 ![A screen shot of how to take screen shots in Jekyll.]({{ site.baseurl | append: "/img/captures/jekyll-screen-shot.jpg" }})
 
-Notice the the source is created by appending the site.baseurl to the location of the image file. In this code the filter absolute_url has not been used either. 
+Notice the the source is created by appending the site.baseurl to the location of the image file.
