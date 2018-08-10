@@ -17,16 +17,22 @@ layout: default
 </header>
 
 {% for post in site.posts %}
-  <div class="post-preview">
-    <a href="{{site.baseurl}}{{ post.url }}">
-      <h2 class="post-title">
-          {{ post.title }}
-      </h2>
-      <h3 class="post-subtitle">
-          {{ post.summary }}
-      </h3>
-    </a>
-    <p class="post-meta">{{ post.date | date: '%Y-%M-%d' }}</p>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+      <div class="post-preview">
+        <a href="{{site.baseurl}}{{ post.url }}">
+          <h2 class="post-title">
+              {{ post.title }}
+          </h2>
+          <h3 class="post-subtitle">
+              {{ post.summary }}
+          </h3>
+        </a>
+        <p class="post-meta">{{ post.date | date: '%Y-%M-%d' }}</p>
+      </div>
+    </div>
   </div>
-  <hr>
+</div>
+<hr>
 {% endfor %}
