@@ -5,6 +5,14 @@ summary: Simple guide to adding screen shots and making each blog post easier to
 author: jon_maloney
 ---
 
-A screenshot or any image can be added to a jekyll page 
+A screenshot or any image can be added to a jekyll page. If using markdown you add the following code. 
 
-![A screen shot of how to take screen shots in Jekyll.]({{ site.baseurl | append: "/img/captures/jekyll-screen-shot.jpg" }})
+```markdown
+![A screen shot of render images using liquid.]({{ site.baseurl | append: "/img/captures/jekyll-screen-shot.jpg" }})
+```
+
+
+
+![A screen shot of how to take screen shots in Jekyll.]({{ site.baseurl | append: "/img/captures/jekyll-screen-shot.jpg" | absolute_url }})
+
+Notice the the source is created by appending the site.baseurl to the location of the image file. In this code the filter absolute_url has not been used either. 
