@@ -6,7 +6,7 @@ layout: default
 {% assign author = site.data.authors[page.author] %}
 
 <!-- Page Header -->
-<header class="masthead" style="background-image: url('img/post-bg.jpg')">
+<header class="masthead" style="background-image: url('/blog/img/post-bg.jpg')">
 	<div class="overlay"></div>
 		<div class="container">
 			<div class="row">
@@ -19,7 +19,7 @@ layout: default
 					  	{% if author %}
 					  	<span class="meta">Posted by
 					    	<!-- Personal Info. -->
-							Post by <a href="{{ author.web }}" target="_blank">{{ author.name }}</a>
+							<a href="{{ author.web }}" target="_blank">{{ author.name }}</a>
 						</span>
 						{% endif %}
 					</div>
