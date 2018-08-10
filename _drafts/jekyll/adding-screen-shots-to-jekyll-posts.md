@@ -5,5 +5,6 @@ summary: Simple guide to adding screen shots and making each blog post easier to
 author: jon_maloney
 ---
 
-Simply add some text then a colon followed by:
-![A screen shot of how to take screen shots in Jekyll.]({{site.baseurl}}/img/captures/jekyll-screen-shot.jpg)
+A screenshot or any image can be added to a jekyll page 
+
+![A screen shot of how to take screen shots in Jekyll.]({{ site.baseurl | append: "/img/captures/jekyll-screen-shot.jpg" }})
