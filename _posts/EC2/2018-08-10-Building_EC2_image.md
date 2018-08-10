@@ -1,6 +1,7 @@
 ---
 layout: posts
-title: Install Docker CE - CentOS
+title: Building EC2 image
+summary: Quick reference summary of how I've built my EC2 instances.
 author:jon_maloney
 ---
 
