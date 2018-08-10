@@ -2,8 +2,8 @@
 layout: post
 title: Install docker-compose CentOS
 author: jon_maloney
+summary: A quick recap on how install docker compose on centos.
 ---
-
 
 source:
     https://docs.docker.com/compose/install/#install-compose
