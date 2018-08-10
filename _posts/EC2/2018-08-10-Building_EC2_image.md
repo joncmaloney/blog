@@ -2,7 +2,7 @@
 layout: posts
 title: Building EC2 Instance
 summary: Quick reference summary of how I've built my EC2 Instances.
-author:jon_maloney
+author: jon_maloney
 ---
 
 Building an Instance
