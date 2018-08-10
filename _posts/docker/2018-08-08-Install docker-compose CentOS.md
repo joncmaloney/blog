@@ -21,8 +21,9 @@ Download the compose software
   ```bash
   $ chmod +x /usr/local/bin/docker-compose
   ```
+
 Install command completion
----------------------------
+----------------------------
 1. Place the completion script in /etc/bash_completion.d/.
   ```bash
   $ curl -L https://raw.githubusercontent.com/docker/compose/1.22.0/contrib/completion/bash/docker-compose -o /etc/bash_completion.d/docker-compose
