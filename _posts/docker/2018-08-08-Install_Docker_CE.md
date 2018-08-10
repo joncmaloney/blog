@@ -4,8 +4,7 @@ title: Install Docker CE - CentOS
 author: jon_maloney
 summary: A summary of how to install Docker CE on a clean CentOS build. 
 ---
-
-source: https://docs.docker.com/install/linux/docker-ce/centos/
+Source: https://docs.docker.com/install/linux/docker-ce/centos/
 
 Install using the repository
 -----------------------------
