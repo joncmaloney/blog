@@ -203,6 +203,26 @@ Vagrant.configure("2") do |config|
 end
 ```
 
+
+
+You might also notice that this Vagrantfile includes provisioning to install docker. This is a logical progression from one of our first posts about [How to install docker CE](http://www.joncmaloney.com/blog/2018/08/08/Install_Docker_CE.html). The following explains each of the parameters used in the Vagrantfile. 
+
+- `access_key_id` - The access key from the IMA user you created. 
+- `aws.secret_access_key` - The secret from the IMA user you created. 
+- `aws.keypair_name` - The name of the pem file which is used to access the EC2 instance. 
+- `aws.instance_type` - The type of instance, such as "m3.medium" or  "t2.micro".
+- `aws.region` - The region where your EC2 instance is to be launched. Note you must also have your security groups and VPC created in this region. 
+- `aws.ami` - The name of the image you wish to startup. In this case we have used an Amazon Red Hat Quick Start image. The ami is also linked to the region. You can find the ami by clicking on Launch Instance from the AWS EC2 web console. 
+- `aws.security_groups` - This supposably can take the security group name however this wasn't working for me. I had to use the group id instead. Vagrant will by use the 'default' security group if this is not defined. 
+- ```aws.subnet_id``` - The VPC subnet that the EC2 instance will join. 
+- `aws.associate_public_ip` - Set to true if you want your EC2 instance to have a public IP address. If you haven't setup a NAT gateway inside your VPC then you will have to give the instance a public IP address so it can reach the internet. 
+- `override.ssh.username` - The username of the user in the EC2 instance. When using the Red Hat image we have specified the default user is ec2-user; a [list of default usernames](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html) is in this article. 
+- `override.ssh.private_key_path` - The path to the pem file to gain ssh access to your EC2 machine. 
+- `aws.ssh_host_attribute` - How ssh will connect to your EC2 instance. `:public_ip_address`, `:dns_name`, or `:private_ip_address`, will use the public IP address, DNS name, or private IP address, respectively, to SSH to the instance. By default Vagrant uses the first of these (in this order) that is known. However, this can lead to connection issues if, e.g., you are assigning a public IP address but your security groups prevent public SSH access and require you to SSH in via the private IP address; specify `:private_ip_address` in this case. 
+- `aws.tags` - A tag you can add to your EC2 instance. I like to name each of my instances. In our example we have named the instance my-server.
+
+
+
 #### Troubleshoot: 
 
 To help troubleshoot when using vagrant. You can use the --debug option which will show debug logs whilst vagrant is statrting up. 
