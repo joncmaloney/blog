@@ -1,4 +1,13 @@
-# Install Vagrant on CentOS
+---
+layout: post
+title: Install Vagrant on CentOS
+author: jon_maloney
+summary: A quick start guide on how to install vagrant on Centos / Red Hat
+---
+
+Source: 
+https://www.tecmint.com/how-to-install-vagrant-on-centos-7/
+
 
 In this tutorial version 2.1.2 of vagrant has been used. To find the latest version go to https://www.vagrantup.com/downloads.html.
 
