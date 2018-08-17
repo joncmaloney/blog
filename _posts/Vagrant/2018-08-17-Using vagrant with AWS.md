@@ -2,7 +2,7 @@
 layout: post
 title: Using Vagrant with AWS
 author: jon_maloney
-summary: How to setup Vagrant to help automat Launching EC2 instances.
+summary: How to setup vagrant-aws and automate Launching EC2 instances.
 ---
 
 source:
@@ -13,10 +13,6 @@ The latest version of vagrant-aws at the time of this blog post is 0.7.2.
 #### Prerequisites 
 
 If you haven't already done so the following pre-requisites are assumed for this tutorial. 
-
-
-
-
 
 First install vagrant-aws 
 
