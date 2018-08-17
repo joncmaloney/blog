@@ -16,6 +16,7 @@ The latest version of vagrant-aws at the time of this blog post is 0.7.2.
 #### Prerequisites 
 
 If you haven't already done so the following pre-requisites are assumed for this tutorial. 
+http://joncmaloney.com/blog/2018/08/17/Install-vagrant-Centos.html
 
 First install vagrant-aws 
 
@@ -55,7 +56,7 @@ If this happens just run the download again and it should be fine.
 ==> box: Successfully added box 'dummy' (v0) for 'aws'!
 ```
 
-Create a new IMA user so this user has access to creating ec2 instances. The following policy document provides the minimal set permissions necessary for Packer to work: 
+Create a new IMA user so this user has access to creating ec2 instances. The following policy document provides the minimal set permissions necessary for Packer to work. There will be a series of blog posts about AWS security, users and roles but this is not yet complete until then you can check out [how packer.io has setup security for ec2 instances](https://www.packer.io/docs/builders/amazon.html#toc_1). The below is an extract of their security policy.
 
 ```json
 {
@@ -101,7 +102,7 @@ Create a new IMA user so this user has access to creating ec2 instances. The fol
 }
 ```
 
-Modify the Vagrantfile
+After running "*vagrant box add...*" a Vagrantfile will appear in your current directory. Modify the Vagrantfile so it looks similar to the blow. Note there are some extended parameters that are not included in the blog post from [mitchellh](https://github.com/mitchellh/vagrant-aws) or from [devops.com](https://devops.com/devops-primer-using-vagrant-with-aws/). These extended parameters are to ensure vagrant can access the new ec2 instance via our VPC. If you are not sure about how to setup EC2 infrastructure check out our upcoming series.
 
 ```ruby
 # -*- mode: ruby -*-
@@ -202,13 +203,9 @@ Vagrant.configure("2") do |config|
 end
 ```
 
-
-
-Troubleshoot: 
+#### Troubleshoot: 
 
 To help troubleshoot when using vagrant. You can use the --debug option which will show debug logs whilst vagrant is statrting up. 
-
-
 
 ```bash
 $ sudo vagrant up --debug --provider=aws
