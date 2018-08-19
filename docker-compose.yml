@@ -1,6 +1,7 @@
 version: '3.1'
 services:
-  web-service:
+  blog-service:
+    container_name: blog
     command: jekyll s --future --force_polling 
     image: jekyll/jekyll:3.5
     volumes:
