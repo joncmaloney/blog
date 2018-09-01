@@ -1,8 +1,9 @@
+---
 layout: post
 title: Getting Started - Installing Terraform on windows
 author: jon_maloney
 summary: TBD
-
+---
 Source: https://www.vasos-koupparis.com/terraform-getting-started-install/
 
 ## Download Terraform
