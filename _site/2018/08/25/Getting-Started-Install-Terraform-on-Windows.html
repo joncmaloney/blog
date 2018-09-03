@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Getting Started - Installing Terraform on windows</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/blog/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="/blog/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="/blog/css/clean-blog.min.css" rel="stylesheet">
+    <!-- CSS for language highlighting -->
+    <link href="/blog/css/prism.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="/blog">Blog Home</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/blog">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#features">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Look the author details up from the site config. -->
+
+
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('/blog/img/post-bg.jpg')">
+	<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-md-10 mx-auto">
+					<div class="post-heading">
+					  	<h1>Getting Started - Installing Terraform on windows</h1>
+					  	
+					  	
+					  	<span class="meta">Posted by
+					    	<!-- Personal Info. -->
+							<a href="https://twitter.com/joncmaloney" target="_blank">Jon Maloney</a>
+						</span>
+						
+						</br>
+						<h3 class="meta">Publish Date: 2018-08-25</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+<article>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-md-10 mx-auto">
+				<p>Source: https://www.vasos-koupparis.com/terraform-getting-started-install/</p>
+
+<h2 id="download-terraform">Download Terraform</h2>
+
+<p>You can  <a href="https://releases.hashicorp.com/terraform/?_ga=2.17493689.1489308342.1524687882-1109174367.1520536284">download a version of Terraform</a> from the releases service.</p>
+
+<h2 id="install-terraform--windows">Install Terraform – Windows</h2>
+
+<ol>
+  <li>Download terraform for windows
+    <ul>
+      <li>Note: Terraform is packaged as a zip archive, so after downloading Terraform, unzip the package. Terraform runs as a single binary named terraform. Any other files in the package can be safely removed and Terraform will still function</li>
+    </ul>
+  </li>
+  <li>Copy files from the zip to “c:\terraform” for example. That’s our terraform <strong>PATH.</strong></li>
+  <li>The final step is to make sure that the terraform binary is available on the <strong>PATH</strong>.</li>
+</ol>
+
+<h4 id="general-information">General Information</h4>
+
+<ul>
+  <li>The <strong>PATH</strong> is the system variable that your operating system uses to locate needed executables from the command line or Terminal window.</li>
+  <li>The <strong>PATH</strong> system variable can be set using <strong>System Utility</strong> in control panel on Windows, or in your shell’s startup file on Linux.</li>
+</ul>
+
+<h3 id="windows-10-and-windows-8">Windows 10 and Windows 8</h3>
+
+<ol>
+  <li>In Search, search for and then select: System (Control Panel)</li>
+  <li>Click the <strong>System and Security</strong> link.</li>
+  <li>Click the <strong>System</strong> link.</li>
+  <li>Click the <strong>Advanced system settings</strong> link.</li>
+  <li>Click <strong>Environment Variables</strong>. In the section <strong>System Variables</strong>, find the <strong>PATH</strong> environment variable and select it. Click <strong>Edit</strong>. If the <strong>PATH</strong> environment variable does not exist, click <strong>New</strong>.</li>
+  <li>In the <strong>Edit System Variable</strong> (or <strong>New System Variable</strong>) window, append at the end of the <strong>PATH</strong> environment variable the value of terraform path ex.”c:\terraform;” . Click <strong>OK</strong>. Close all remaining windows by clicking <strong>OK</strong>.</li>
+  <li>Reopen Command prompt window, and run terraform.</li>
+</ol>
+
+
+			</div>
+		</div>
+	</div>
+</article>
+
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <ul class="list-inline text-center">
+              <li class="list-inline-item">
+                <a href="https://twitter.com/joncmaloney">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.linkedin.com/in/jon-maloney/">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://github.com/joncmaloney">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="copyright text-muted">Copyright &copy; Jon Maloney 2018</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="/blog/vendor/jquery/jquery.min.js"></script>
+    <script src="/blog/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="/blog/js/clean-blog.min.js"></script>
+
+    <!-- Custom script for language syntax highlighting -->
+    <script src="/blog/js/prism.js"></script>
+
+  </body>
+
+</html>

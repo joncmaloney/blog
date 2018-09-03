@@ -1,0 +1,15 @@
+version: '3.1'
+services:
+  blog-service:
+    container_name: blog
+    command: jekyll s --future --force_polling 
+    image: jekyll/jekyll:3.5
+    volumes:
+      - /opt/blog:/srv/jekyll
+    expose:
+      - 4000
+
+networks:
+  default:
+    external:
+      name: nginx_default
